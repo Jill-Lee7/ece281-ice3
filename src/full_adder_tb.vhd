@@ -45,21 +45,21 @@ begin
 	begin
         -- Octal test cases based on full adder truth table
         -- https://usafa-ece.github.io/ece281-book/ICE/ICE3.html#full-adder-truth
-        w_in <= o"0"; wait for 10 ns;
+        w_in <= "000"; wait for 10 ns;
             assert w_out = "00" report "Error on input o0" severity failure;
-        w_in <= o"1"; wait for 10 ns;
+        w_in <= "001"; wait for 10 ns;
             assert w_out = "01" report "Error on input o1" severity failure;
-        w_in <= o"2"; wait for 10 ns;
+        w_in <= "010"; wait for 10 ns;
             assert w_out = "01" report "Error on input o2" severity failure;
-        w_in <= o"3"; wait for 10 ns;
+        w_in <= "011"; wait for 10 ns;
             assert w_out = "10" report "Error on input o3" severity failure;
-        w_in <= o"4"; wait for 10 ns;
+        w_in <= "100"; wait for 10 ns;
             assert w_out = "01" report "Error on input o4" severity failure;
-        w_in <= o"5"; wait for 10 ns;
+        w_in <= "101"; wait for 10 ns;
             assert w_out = "10" report "Error on input o5" severity failure;
-        w_in <= o"6"; wait for 10 ns;
+        w_in <= "110"; wait for 10 ns;
             assert w_out = "10" report "Error on input o6" severity failure;
-        w_in <= o"7"; wait for 10 ns;
+        w_in <= "111"; wait for 10 ns;
             assert w_out = "11" report "Error on input o7" severity failure;                                          
                                 
 		wait; -- wait forever
